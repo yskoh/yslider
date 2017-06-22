@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<style>
+		.exhibition__rolling-banner {
+			position: relative;
+			overflow: hidden;
+			width:698px;
+			height: 800px;
+		}
+
+		.list-banner {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			/*width:300%;*/
+		}
+
+		li {
+			position: relative;
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			width: 698px;
+			height: 698px;
+			background: #ccc;
+		}
+		button {
+			position: relative;
+		}
+
+			/*.exhibition__rolling-banner {
+				width: 698px; position:relative; display:block; overflow:hidden; background-color: green;
+			}
+			.list-banner {
+				position:absolute; background-color: pink; width: 300%; display:block; overflow:hidden;
+			li {
+				width:698px; float:left; list-style:none;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="exhibition__rolling-banner mg-section-sm" data-type="bannerWrapper" data-time="2000" >
+			<ul class="list-banner" data-type="bannerUl" style="width:300%;">
+				<!-- 기획전 롤링 배너 아이템 -->
+				<li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/00f/fff" target="_blank">
+						<img src="https://dummyimage.com/698/00f/fff" width="698px" height="698px">
+					</a>
+				</li>
+				<li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/0f0/fff" target="_blank">
+						<img src="https://dummyimage.com/698/0f0/fff" width="698px" height="698px">
+					</a>
+				</li>
+				<li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/f00/fff" target="_blank">
+						<img src="https://dummyimage.com/698/f00/fff" width="698px" height="698px">
+					</a>
+				</li>
+
+			</ul>
+			<div class="wrap-pager">
+				<!-- position:absolute; top: 20px; right: 25px; display:block; -->
+				<span class="inner" data-type="pagerSpan">
+					<!-- overflow: hidden; float:left; width:12px; height:15px; margin-right:6px; font-size:0;line-height:0; text-indent:-999em; display:block; background: url(//image.wemakeprice.com/images/resources/wmp/common/ico-banner-comm.png) 0 -55px no-repeat; -->
+					<!-- 배너 dots 아이템 -->
+				</span>
+			</div>
+			<button type="button" class="btn-prev" data-type="prev" >이전</button>
+			<button type="button" class="btn-next" data-type="next">다음</button>
+		</div>
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="./slider.js"></script>
+		<script>
+
+		  var dataObj = {
+	  	time: 3000,
+	  	bannerAniMode: 'fade',
+	  	bannerImgWidth: 698,
+	 		bannerImgHeight: 698,
+	  	maxLen: 10
+		  };
+
+		exhEvt.init(dataObj);
+		</script>
+	</body>
+</html>
