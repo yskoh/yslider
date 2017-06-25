@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<style>
+		.exhibition__rolling-banner {
+			position: relative;
+			overflow: hidden;
+			width:698px;
+			height: 698px;
+		}
+
+		.list-banner {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			/*width:300%;*/
+		}
+
+		li {
+			position: relative;
+			display: block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			width: 698px;
+			height: 698px;
+			background: #ccc;
+		}
+		button {
+			position: relative;
+		}
+		.wrap-pager {
+			position:absolute;
+			/*top: 20px;*/
+			bottom: 10px;
+			right: 25px;
+			width: 40px;
+			left: 50%;
+			margin-left: -20px;
+			display:block;
+		}
+		.pager-link {
+			width: 10px;
+			height: 10px;
+			margin: 1px;
+			text-indent: -999px;
+			cursor: pointer;
+			background-color: #000;
+			border: 1px solid #fff;
+			/* border-radius: 10px; */
+			/*overflow: hidden;
+			float:left;
+			width:12px;
+			height:15px;
+			margin-right:6px;
+			font-size:0;
+			line-height:0;
+			text-indent:-999em;
+			display:block;
+			background: url(https://octicons.github.com/img/og/primitive-dot.png) 0 -55px no-repeat;*/
+		}
+		.btn-prev {
+			position:absolute;
+			top: 50%;
+			left: 0;
+			height: 20px;
+			margin-top: -10px;
+		}
+		.btn-next {
+			position:absolute;
+			top: 50%;
+			right: 0;
+  		height: 20px;
+		  margin-top: -10px;
+		}
+		.active {
+			background-color: #fff;
+		}
+			/*.exhibition__rolling-banner {
+				width: 698px; position:relative; display:block; overflow:hidden; background-color: green;
+			}
+			.list-banner {
+				position:absolute; background-color: pink; width: 300%; display:block; overflow:hidden;
+			li {
+				width:698px; float:left; list-style:none;
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="exhibition__rolling-banner mg-section-sm" data-type="bannerWrapper" data-time="2000" >
+			<ul class="list-banner" data-type="bannerUl" style="width:300%;">
+				<!-- 기획전 롤링 배너 아이템 -->
+				<!-- <li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/00f/fff" target="_blank">
+						<img src="https://dummyimage.com/698/00f/fff" width="698px" height="698px">
+					</a>
+				</li>
+				<li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/0f0/fff" target="_blank">
+						<img src="https://dummyimage.com/698/0f0/fff" width="698px" height="698px">
+					</a>
+				</li>
+				<li data-type="bannerImg">
+					<a href="https://dummyimage.com/698/f00/fff" target="_blank">
+						<img src="https://dummyimage.com/698/f00/fff" width="698px" height="698px">
+					</a>
+				</li> -->
+
+			</ul>
+			<div class="wrap-pager">
+				<!-- <span class="inner" data-type="pagerSpan"> -->
+					<!-- 배너 dots 아이템 -->
+				</span>
+			</div>
+			<button type="button" class="btn-prev" data-type="prev" >이전</button>
+			<button type="button" class="btn-next" data-type="next">다음</button>
+		</div>
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="./slider.js"></script>
+		<script>
+			var dataObj = {
+				imgs: [{imgUrl: 'https://dummyimage.com/698/f00/fff', linkUrl: 'https://dummyimage.com/698/f00/fff'}, {imgUrl: 'https://dummyimage.com/698/0f0/fff', linkUrl: 'https://dummyimage.com/698/0f0/fff'}, {imgUrl: 'https://dummyimage.com/698/00f/fff', linkUrl: 'https://dummyimage.com/698/00f/fff'}],
+				bannerImgWidth: 698,
+				bannerImgHeight: 698,
+				dotDisplay: true,
+				time: 3000,
+				bannerAniMode: 'slide',
+				autoplay: false
+			};
+			exhEvt.init(dataObj);
+		</script>
+	</body>
+</html>
