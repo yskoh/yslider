@@ -1,0 +1,59 @@
+.banner-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-li {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: #ccc;
+}
+
+.wrap-pager {
+  position:absolute;
+  top: 20px;
+  right: 25px;
+  display:block;
+}
+.pager {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.arrow-btn {
+  border: 0;
+  padding: 0;
+  display:block;
+  position:absolute;
+  top: 50%;
+  height: 40px;
+  margin-top: -10px;
+  background: url('rarrow.png') no-repeat scroll;
+  width: 30px;
+}
+.prev {
+  left: 0;
+  transform: scaleX(-1);
+}
+.next {
+  right: 0;
+}
+.active {
+  background-color: #fff;
+}

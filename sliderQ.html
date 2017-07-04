@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="./slider.css">
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.3.css">
+	</head>
+	<body>
+		<div class="rolling-banner" data-type="bannerWrapper">
+			<ul class="list-banner" data-type="bannerUl">
+			</ul>
+		</div>
+		<div id="qunit"></div>
+		<div id="qunit-fixture"></div>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="./npm-slider.js"></script>
+		<script>
+			var dataObj = {
+				imgs: [{imgUrl: 'https://dummyimage.com/698/f00/fff', linkUrl: 'https://dummyimage.com/698/f00/fff'}, {imgUrl: 'https://dummyimage.com/698/0f0/fff', linkUrl: 'https://dummyimage.com/698/0f0/fff'}, {imgUrl: 'https://dummyimage.com/698/00f/fff', linkUrl: 'https://dummyimage.com/698/00f/fff'}],
+				bannerImgWidth: 698,
+				bannerImgHeight: 698,
+				dotsDisplay: true,
+				time: 1000,
+				bannerAniMode: 'slide',
+				autoPlay: false
+			};
+			Slider.init(dataObj);
+		</script>
+  <script src="https://code.jquery.com/qunit/qunit-2.3.3.js"></script>
+  <script src="./testQ.js"></script>
+	</body>
+</html>
