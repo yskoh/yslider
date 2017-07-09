@@ -215,6 +215,7 @@ var Slider = {
     this.imgWidth = parseFloat(settingsObj.bannerImgWidth) || this.imgWidth;
     this.imgHeight = parseFloat(settingsObj.bannerImgHeight) || this.imgHeight;
     this.elem.container.css('width', this.imgWidth);
+    this.elem.container.css('height', this.imgHeight);
     this.elem.contents.find('li[data-type="bannerImg"]').css('width', this.imgWidth);
     this.elem.container.css('width', this.imgWidth);
     this.elem.contents.find('li[data-type="bannerImg"]').css('height', this.imgHeight);
@@ -230,5 +231,3 @@ var Slider = {
     this.setSliderModeDom();
   }
 };
-
-// module.exports = Slider;
