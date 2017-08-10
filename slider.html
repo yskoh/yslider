@@ -3,26 +3,32 @@
 		<link rel="stylesheet" href="./slider.css">
 	</head>
 	<body>
-		<div class="banner-slider" data-type="sliderWrapper">
-			<ul class="banner-li" data-type="bannerUl">
-			</ul>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="./slider.js"></script>
+		<script type="text/javascript" src="./jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="./newSlider.js"></script>
 		<script>
 			var dataObj = {
 				imgs: [{imgUrl: 'https://dummyimage.com/698/f00/fff', linkUrl: 'https://dummyimage.com/698/f00/fff'}, {imgUrl: 'https://dummyimage.com/698/0f0/fff', linkUrl: 'https://dummyimage.com/698/0f0/fff'}, {imgUrl: 'https://dummyimage.com/698/00f/fff', linkUrl: 'https://dummyimage.com/698/00f/fff'}, {imgUrl: 'https://dummyimage.com/698/aaa/fff', linkUrl: 'https://dummyimage.com/698/aaa/fff'}, {imgUrl: 'https://dummyimage.com/698/bbb/fff', linkUrl: 'https://dummyimage.com/698/bbb/fff'}]
 				// imgs: [{imgUrl: 'https://dummyimage.com/600x400/000/fff', linkUrl: 'https://dummyimage.com/600x400/000/fff'}, {imgUrl: 'https://dummyimage.com/600x400/222/fff', linkUrl: 'https://dummyimage.com/600x400/222/fff'}, {imgUrl: 'https://dummyimage.com/600x400/444/fff', linkUrl: 'https://dummyimage.com/600x400/444/fff'}, {imgUrl: 'https://dummyimage.com/600x400/aaa/fff', linkUrl: 'https://dummyimage.com/600x400/aaa/fff'}]
-
 				,
 				bannerImgWidth: 698,
 				bannerImgHeight: 698,
 				dotsDisplay: true,
 				time: 3000,
 				bannerAniMode: 'slide',
-				autoPlay: true
+				autoPlay: true,
+				location: $('div')
 			};
-			Slider.init(dataObj);
+			var dataObj2 = {
+				imgs: [{imgUrl: 'https://dummyimage.com/698/f00/fff', linkUrl: 'https://dummyimage.com/698/f00/fff'}, {imgUrl: 'https://dummyimage.com/698/0f0/fff', linkUrl: 'https://dummyimage.com/698/0f0/fff'}, {imgUrl: 'https://dummyimage.com/698/00f/fff', linkUrl: 'https://dummyimage.com/698/00f/fff'}, {imgUrl: 'https://dummyimage.com/698/aaa/fff', linkUrl: 'https://dummyimage.com/698/aaa/fff'}],
+				bannerImgWidth: 400,
+				bannerImgHeight: 400,
+				dotsDisplay: true,
+				time: 3000,
+				bannerAniMode: 'fade',
+				autoPlay: false
+			};
+			var slider = new Slider(dataObj, 1);
+			var slider2 = new Slider(dataObj2, 2);
 		</script>
 	</body>
 </html>
